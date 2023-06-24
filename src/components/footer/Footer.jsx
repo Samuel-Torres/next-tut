@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 const Footer = () => {
 
-    console.log("hello")
   return (
     <div className={styles.container}>
         <div>©2023 Lamamia. All rights reserved</div>
