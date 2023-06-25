@@ -16,7 +16,6 @@ async function getData() {
 
 const Blogs = async() => {
   const data = await getData()
-  console.log("DATA:", data)
   return (
     <div className={styles.mainContainer}>
 
