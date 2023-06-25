@@ -7,7 +7,6 @@ import { notFound } from 'next/navigation';
 
 const getData = (cat) => {
   const data = items[cat];
-  console.log("INCOMING: ", data)
 
   if(data) {
     return data
@@ -16,10 +15,8 @@ const getData = (cat) => {
 }
 
 const Category = ({ params }) => {
-  console.log("ALL PARAMS:", params)
   const data = getData(params.categoryName);
   
-  console.log("param:", params)
   return (
     <div className={styles.container}>
       <h1 className={styles.catTitle}>{params.categoryName}</h1>
