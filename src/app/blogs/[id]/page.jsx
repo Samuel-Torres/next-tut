@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { Metadata } from 'next'
 
 async function getData(id) {
   const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
@@ -15,15 +16,11 @@ async function getData(id) {
   return res.json();
 }
 
-
 export async function generateMetadata({ params }) {
-
   const post = await getData(params.id)
   return {
     title: post.title,
-    desc: post.desc,
-    username: post.username,
-    image: post.image
+    desc: post.desc
   };
 }
 
